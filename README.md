@@ -8,30 +8,31 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
 - `gifs/`: Contains visualizations of tree structures or classification results.
 
 **1. Code Structure**
-**  decision_tree_main.py:**
-  -  Sets the dataset directory, dataset name, and hyperparameters (option, pruning_thr).
-  -  Calls the decision_tree function with the specified inputs.
+**decision_tree_main.py:**
+  - Sets the dataset directory, dataset name, and hyperparameters (option, pruning_thr).
+  - Calls the decision_tree function with the specified inputs.
 
-**  decision_tree.py:**
-     **Data Loading:** Reads training and test data from UCI-format files.
-     **Tree/Forest Construction:**
-      -  Optimized Tree: Chooses the optimal feature and threshold at each node to maximize           information gain.
-      -  Randomized Tree: Randomly selects features at each node, optimizing thresholds for           information gain.
-      -  Random Forest: Builds multiple randomized trees and aggregates their predictions.
-     **Pruning:** Stops splitting nodes if the number of samples is below the pruning_thr.
-     **Classification:**
-      -  Predicts classes for test data using the trained tree or forest.
-      -  Handles ties in predictions and computes accuracy for each test object.
-    **Output:**
-      -  Prints the tree structure in breadth-first order during training.
-      -  Prints object ID, predicted class, true class, and accuracy for each test example.
-      -  Computes and prints the overall classification accuracy.
+**decision_tree.py:**  
+  - **Data Loading:** Reads training and test data from UCI-format files.  
+  - **Tree/Forest Construction:**  
+    - **Optimized Tree:** Chooses the optimal feature and threshold at each node to maximize information gain.  
+    - **Randomized Tree:** Randomly selects features at each node, optimizing thresholds for information gain.  
+    - **Random Forest:** Builds multiple randomized trees and aggregates their predictions.  
+  - **Pruning:** Stops splitting nodes if the number of samples is below the `pruning_thr`.  
+  - **Classification:**  
+    - Predicts classes for test data using the trained tree or forest.  
+    - Handles ties in predictions and computes accuracy for each test object.  
+  - **Output:**  
+    - Prints the tree structure in breadth-first order during training.  
+    - Prints object ID, predicted class, true class, and accuracy for each test example.  
+    - Computes and prints the overall classification accuracy.  
 
 **Key Features**
-     Supports both single decision trees and random forests.
-     Configurable hyperparameters:
-      -  option: "optimized" for a single optimized tree, or an integer for a random forest           with that many trees.
-      -  pruning_thr: Controls early stopping during tree construction.
+1. Supports both single decision trees and random forests.
+   
+2. Configurable hyperparameters:
+  - option: "optimized" for a single optimized tree, or an integer for a random forest           with that many trees.
+  - pruning_thr: Controls early stopping during tree construction.
      Uses information gain to select features and thresholds.
      Handles multi-class classification tasks.
 
@@ -50,17 +51,18 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
      -  Output: Forest structure and classification accuracy (e.g., 87.31%–89.94%).
 My results were consistent with expected performance ranges.
 
-**Example Output**
-  Training Output (tree structure):
-  " tree= 1, node=  1, feature= 1, thr=  0.50, gain=0.123456
-    tree= 1, node=  2, feature=-1, thr= -1.00, gain=0.000000
-    ... "
-
-  Test Output (classification results):
-  " ID=    1, predicted=  2, true=  2, accuracy=1.00
-    ID=    2, predicted=  4, true=  4, accuracy=1.00
-    ...
-    Overall accuracy: 0.8382"
+**Example Output**  
+- **Training Output (tree structure):**  
+  ```plaintext
+  tree= 1, node=  1, feature= 1, thr=  0.50, gain=0.123456  
+  tree= 1, node=  2, feature=-1, thr= -1.00, gain=0.000000  
+  ...  
+- **Test Output (classification results):**
+  ```plaintext
+  ID=    1, predicted=  2, true=  2, accuracy=1.00
+  ID=    2, predicted=  4, true=  4, accuracy=1.00
+  ...
+  Overall accuracy: 0.8382"
 
 
     
