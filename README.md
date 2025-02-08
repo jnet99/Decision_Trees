@@ -4,7 +4,6 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
 
 ## Repository Structure
 - `data/`: Contains datasets (e.g., `pendigits_training.txt`).
-- `outputs/`: Contains test results for different configurations.
 - `gifs/`: Contains visualizations of tree structures or classification results.
 
 **1. Code Structure**
