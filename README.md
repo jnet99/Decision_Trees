@@ -49,8 +49,8 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
   3. Random Forest (15 Trees):
      -  Output: Forest structure and classification accuracy (e.g., 87.31%–89.94%).
 My results were consistent with expected performance ranges.
-**
-Example Output**
+
+**Example Output**
   Training Output (tree structure):
   " tree= 1, node=  1, feature= 1, thr=  0.50, gain=0.123456
     tree= 1, node=  2, feature=-1, thr= -1.00, gain=0.000000
