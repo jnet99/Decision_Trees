@@ -8,7 +8,7 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
 - `gifs/`: Contains visualizations of tree structures or classification results.
 
 **1. Code Structure**
-**decision_tree_main.py:**
+**decision_tree_main.py:**  
   - Sets the dataset directory, dataset name, and hyperparameters (option, pruning_thr).
   - Calls the decision_tree function with the specified inputs.
 
