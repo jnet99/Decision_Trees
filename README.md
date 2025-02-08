@@ -11,7 +11,7 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
   decision_tree_main.py:
   -  Sets the dataset directory, dataset name, and hyperparameters (option, pruning_thr).
   -  Calls the decision_tree function with the specified inputs.
-```
+
   decision_tree.py:
      **Data Loading:** Reads training and test data from UCI-format files.
      **Tree/Forest Construction:**
@@ -26,7 +26,7 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
       -  Prints the tree structure in breadth-first order during training.
       -  Prints object ID, predicted class, true class, and accuracy for each test example.
       -  Computes and prints the overall classification accuracy.
-```
+
 **Key Features**
      Supports both single decision trees and random forests.
      Configurable hyperparameters:
@@ -49,7 +49,7 @@ Implement a Python function, decision_tree, to train and evaluate decision trees
   3. Random Forest (15 Trees):
      -  Output: Forest structure and classification accuracy (e.g., 87.31%–89.94%).
 My results were consistent with expected performance ranges.
-```
+
 **Example Output**
   Training Output (tree structure):
   " tree= 1, node=  1, feature= 1, thr=  0.50, gain=0.123456
@@ -61,7 +61,7 @@ My results were consistent with expected performance ranges.
     ID=    2, predicted=  4, true=  4, accuracy=1.00
     ...
     Overall accuracy: 0.8382"
-```
+
 
     
 ![decision_tree_1_50](https://github.com/user-attachments/assets/74b3fa96-5fbf-4861-9428-93cd2d82d2fa)
